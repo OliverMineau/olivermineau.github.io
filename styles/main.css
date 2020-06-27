@@ -1,0 +1,117 @@
+body
+{
+    background: #1A1A1A;
+    font-family: monospace;
+    color: orange;
+}
+
+.titleh
+{
+    position: absolute;
+    left: 10%;
+    top: 2%;
+    transform: scale(2);
+}
+
+span.title
+{
+    color: white;
+    font-family: fantasy;
+
+}
+
+.selected
+{
+    text-decoration: none;
+    font-size: large;
+    padding: 5px 10px;
+    color: white;
+}
+
+ul
+{
+    float:right;
+    list-style-type: none;
+    font-weight: bolder;
+    margin-right: 5%;
+}
+
+ul li
+{
+    display: inline-block;
+   
+}
+
+ul li a
+{
+    text-decoration: none;
+    color: orange;
+    font-size: large;
+    padding: 5px 10px;
+
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+
+}
+
+ul li a:hover
+{
+    background-color: orange;
+    padding: 5px 20px;
+    color: black;
+
+
+}
+
+.paragraphs
+{
+    position: relative;
+    top: 500px;
+}
+
+
+.paragraphs p
+{
+    background: black;
+    margin: 5%;
+    padding: 2%;
+
+}
+
+.p2
+{
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+
+.p2:hover
+{
+    transform: scale(2);
+
+}
+
+h1.titreOnglet
+{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    
+}
+
+img
+{ 
+    
+    /*top: 400px;*/
+
+    width: 20%;
+    height: auto;
+
+}

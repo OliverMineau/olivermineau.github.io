@@ -256,6 +256,27 @@ ul li a:hover
     margin: 5px;
 }
 
+.presentation-dronebuilder{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+    border: black solid 4px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #283845;
+
+}
+.presentation-dronebuilder .intro-text h1{
+    color: white;
+    text-decoration: underline;
+}
+.presentation-dronebuilder .intro-text p{
+    color: darkgrey;
+    margin: 5px;
+}
+
 
 
 

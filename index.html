@@ -1,63 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins+Mono|Poppins+Slab|Poppins:300,400,500,600,700,900" rel="stylesheet" />
     <meta charset="UTF-8">
-    <link href="images/minappsLogo.png" rel="shortcut icon" type="image/png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Minapps</title>
+    <title>Oliver Mineau</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7fe62069b4.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    
-    <header>
-        <div class="logo-container">
-            <img src="images/minappsLogow.png" alt="logo">
-            <h4 class="logo">MINAPPS</h4>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="Images/unnamed.png" class="logo"> -->
+
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#apps">Apps</a></li>
+                    <li><a href="#personal-projects">Personal Projects</a></li>
+                    <li><a href="#portfolio">Univeristy Projects</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>Mobile <span>App</span> developement<br>enthusiast</p>
+                <h1>Oliver Mineau</h1>
+            </div>
         </div>
+    </div>
+    
 
-        <nav> 
-
-            <ul class="nav-links">
-                <li ><a class="selected" href="#">ACCUEIL</a></li>
-                <li ><a class="nav-link" href="dmProjets.html">DM et PROJETS</a></li>
-                <li ><a class="nav-link" href="apps.html">APPLICATIONS</a></li>
-                <li ><a class="nav-link" href="#">LOGICIELS</a></li>
-                <li ><a class="nav-link" href="#">AUTRE</a></li>
-            </ul>
-
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-
-        </nav>
-        <script src="js/app.js"></script>
-    </header>
-
-    <main>
-        <section class="presentation">
-            <div class="introduction">
-                <div class="intro-text">
-                    <h1>MINAPPS</h1>
-                    <p>Applications, Jeux, Logiciels</p>
+<!-- ---About--- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/oliver.png">
                 </div>
 
-                <div class="cta">
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Currently in the first year of a Master's degree in computer science</p>
 
-                     <button onclick="window.open('https://play.google.com/store/apps/dev?id=5654747729510334422','_blank')" class="cta-select" type="button">Google Play</button>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event,'education')">Education</p>
+                        <p class="tab-links" onclick="opentab(event,'languages')">Languages</p>
+                        <p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
+                    </div>
+
+                    <div class="tab-contents" id="languages">
+                        <ul>
+                            <li><span>French</span><br>Native</li>
+                            <li><span>English</span><br>Native</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>University Projects</span><br>Networking, Database, AI</li>
+                            <li><span>Personal Projects</span><br>Helped students develop simple Python games</li>
+                            <li><span>App Developement</span><br>Multiple Android apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2021-2023</span><br><small>Grenoble Alpes University Grenoble - France</small><br><strong>Bachelor of Computer Science</strong></li>
+                            <li><span>2019</span><br><small>Lycee Georges Brassens Rive de Gier - France</small><br><strong>A level (Baccalaureat General Scientifique)
+</strong></li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
-            <div class="cover">
-                <img src="images/minappsLogo.png" alt="logo">
-            </div>
-        </section>
+        </div>
+    </div>
 
-        
-    </main>
+
+<!-- --- Programming Languages ---  -->
+<div id="programming-languages">
+    <div class="container">
+        <h1 class="sub-title">Languages Used</h1>
+        <div class="programming-languages-list">
+            <img class="progicon hidden" src="Images/java.png" title="Java">
+            <img class="progicon hidden" src="Images/python.png" title="Python">
+            <img class="progicon hidden" src="Images/c.png" title="C">
+            <img class="progicon hidden" src="Images/csharp.png" title="C#">
+            <img class="progicon hidden" src="Images/sql.png" title="SQL">
+        </div>
+    </div>
+</div>
+
+
+<!-- --- Services ---  -->
+    <div id="services">
+        <div class="container">
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-google-play"></i>
+                    <h2>App Developement</h1>
+                    <p>In Java or C#, using the Unity engine or not.</p>
+                    <p class="tab-links" onclick="openApps(event)">Learn More</p>
+                    <a href="#apps">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h2>Uni Projects</h1>
+                    <p>Projects that were asked for in my computer science degree.</p>
+                    <a href="#portfolio">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Personal Projects</h1>
+                    <p>Games I was led to code while helping students.</p>
+                    <a href="#personal-projects">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- --- Apps ---  -->
+    <div id="apps">
+        <div id="app-menu" class="container app-menu-right">
+            <h1 class="sub-title">My Apps</h1>
+
+            <div class="services-list app-cube app-left hidden">
+                <div>
+                    <img src="Images/Apps/diedash_logo.webp">
+                    <h2>DieDash</h1>
+                    <p>Jump, smash, and dodge the unpredictable mayhem!</p>
+                    <a href="diedash.html">Learn more</a>
+                </div>
+            </div>
+
+            <div class="services-list app-cube app-right hidden">
+                <div>
+                    <img src="Images/Apps/scribbly_logo.webp">
+                    <h2>Scribbly</h1>
+                    <p>12 letters and a grid - Will you figure out which words make up the solution?</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+
+            <div class="services-list app-cube app-left hidden">
+                <div>
+                    <img src="Images/Apps/motus_logo.webp">
+                    <h2>Motus</h1>
+                    <p>Amusez-vous au quotidien en cherchant les mots du jour !</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+
+            <div class="services-list app-cube app-right hidden">
+                <div>
+                    <img src="Images/Apps/dronebuilder_logo.webp">
+                    <h2>Drone Builder</h1>
+                    <p>Drone Builder will help you build your FPV Drone !</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+
+            <div class="services-list app-cube app-left hidden">
+                <div>
+                    <img src="Images/Apps/yourbex_logo.webp">
+                    <h2>Yourbex</h1>
+                    <p>YoUrbex, or how to explore and protect your closest and most secret abandoned locations.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- --- Portfolio --- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Uni Projects</h1>
+            <div class="work-list">
+
+                <div class="work">
+                    <img src="Images/tablut.png">
+                    <div class="layer">
+                        <h3>Tablut</h3>
+                        <p>Tablut Java Game with AI</p>
+                        <a href="https://github.com/OliverMineau/TablutProjectL3"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="Images/sokoban.png">
+                    <div class="layer">
+                        <h3>Sokoban & AI</h3>
+                        <p>Creation of a path finding algorithm to resolve a type of maze puzzle</p>
+                        <a href="https://github.com/OliverMineau/APP_IA_Sokoban"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="Images/serveur.png">
+                    <div class="layer">
+                        <h3>FTP Server</h3>
+                        <p>Program that can execute commands given by remote clients such as receiving, sending, deleting files</p>
+                        <a href="https://github.com/OliverMineau/ServeurFTP"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/terminal.png">
+                    <div class="layer">
+                        <h3>Shell</h3>
+                        <p>Program that exposes an operating system's services to a human user or other programs.</p>
+                        <a href="https://github.com/OliverMineau/TP_SHELL"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/linker.png">
+                    <div class="layer">
+                        <h3>Linker part of a compiler</h3>
+                        <p>Link elf files</p>
+                        <a href="https://github.com/OliverMineau/L3_Linker"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/sqldatabase.png">
+                    <div class="layer">
+                        <h3>SQL Database</h3>
+                        <p>Olympic games database</p>
+                        <a href="https://github.com/OliverMineau/JOProject"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="btn showApp" onclick="openApps(this)">See more</a>
+        </div>
+    </div>
+
+
+    <!-- --- Portfolio --- -->
+    <div id="personal-projects">
+        <div class="container">
+            <h1 class="sub-title">Personal Projects</h1>
+            <div class="work-list">
+
+                <div class="work">
+                    <img src="Images/spaceinvader.png">
+                    <div class="layer">
+                        <h3>Space Invaders</h3>
+                        <p>Language : Python<br>
+                            Modules : Tkinter, Guizero</p>
+                        <a href="https://github.com/OliverMineau/TablutProjectL3"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="Images/spacewars.png">
+                    <div class="layer">
+                        <h3>Space Wars</h3>
+                        <p>Language : Python<br>
+                            Modules : Tkinter, Guizero, PIL</p>
+                        <a href="https://github.com/OliverMineau/APP_IA_Sokoban"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="Images/asteroids.png">
+                    <div class="layer">
+                        <h3>Asteroids</h3>
+                        <p>PLanguage : Python<br>
+                            Modules : Tkinter, Guizero, PIL</p>
+                        <a href="https://github.com/OliverMineau/ServeurFTP"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/snake.png">
+                    <div class="layer">
+                        <h3>Snake</h3>
+                        <p>Language : Python<br>
+                            Modules : Tkinter, Guizero</p>
+                        <a href="https://github.com/OliverMineau/TP_SHELL"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/demineur.png">
+                    <div class="layer">
+                        <h3>Démineur</h3>
+                        <p>Language : Python<br>
+                            Module : Eniseboard</p>
+                        <a href="https://github.com/OliverMineau/L3_Linker"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/sudoku.png">
+                    <div class="layer">
+                        <h3>Sudoku</h3>
+                        <p>Language : Python<br>
+                            Module : Eniseboard</p>
+                        <a href="https://github.com/OliverMineau/JOProject"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/memory.png">
+                    <div class="layer">
+                        <h3>Memory</h3>
+                        <p>Language : Python<br>
+                            Module : Eniseboard</p>
+                        <a href="https://github.com/OliverMineau/JOProject"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/dames.png">
+                    <div class="layer">
+                        <h3>Dames</h3>
+                        <p>Language : Python<br>
+                            Module : Eniseboard</p>
+                        <a href="https://github.com/OliverMineau/JOProject"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/othello.png">
+                    <div class="layer">
+                        <h3>Othello/Reversi</h3>
+                        <p>Language : Python</p>
+                        <a href="https://github.com/OliverMineau/JOProject"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/morpion.png">
+                    <div class="layer">
+                        <h3>Morpion</h3>
+                        <p>Language : Python</p>
+                        <a href="https://github.com/OliverMineau/JOProject"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/loup.png">
+                    <div class="layer">
+                        <h3>Jeu du Loup et des Brebis</h3>
+                        <p>Language : Python</p>
+                        <a href="https://github.com/OliverMineau/JOProject"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden-app">
+                    <img src="Images/labyrinthe.png">
+                    <div class="layer">
+                        <h3>Labyrinthe</h3>
+                        <p>Language : Python</p>
+                        <a href="https://github.com/OliverMineau/JOProject"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <p class="btn showApp" onclick="openApps(this)">See more</a>
+        </div>
+    </div>
+
+
+<!-- --- Contact --- -->
+    <div id="contact">
+        <div class="container">
+            <div class="social-icons">
+                <ul>
+                    <li>
+                        <a href="mailto:oliver.mineau42@orange.fr"><i class="fa-solid fa-at"></i><span>oliver.mineau42@orange.fr</span></a></li>
+                    <li>
+                        <a href="https://fr.linkedin.com/in/oliver-mineau-b7a4861b2"><i class="fa-brands fa-linkedin"></i>Oliver Mineau</a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/OliverMineau"><i class="fa-brands fa-github"></i>OliverMineau</a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="Images/my-cv.pdf" download class="btn btn2">Download CV</a>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script> 
 
 </body>
-
-
 </html>

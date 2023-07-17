@@ -12,7 +12,7 @@ body{
 
 #header{
     height: 100vh;
-    background: url(Images/background_.png) no-repeat center center fixed;
+    background: url(images/background_.png) no-repeat center center fixed;
     background-size: cover;
     background-position: center;
 }
@@ -261,7 +261,7 @@ nav ul li a:hover::after{
 }
 
 .app-cube div{
-    background: url(Images/bgApp5.png);
+    background: url(images/bgApp5.png);
     background-size: cover;
 }
 
@@ -320,7 +320,7 @@ nav ul li a:hover::after{
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(Images/background_app__.jpg);
+    background-image: url(images/background_app__.jpg);
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
@@ -472,7 +472,7 @@ nav .fa-solid{
 @media only screen and (max-width: 600px){
 
     #header{
-        background: url(Images/phone_background_.png) no-repeat center fixed;
+        background: url(images/phone_background_.png) no-repeat center fixed;
         background-size: cover;
         background-position: center;
     }
@@ -553,7 +553,7 @@ nav .fa-solid{
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url(Images/background_app__.jpg);
+        background-image: url(images/background_app__.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

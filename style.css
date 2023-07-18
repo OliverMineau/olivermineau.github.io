@@ -164,6 +164,16 @@ nav ul li a:hover::after{
     display: block;
 }
 
+.download{
+    display: flex;
+}
+
+.download-btn {
+    padding: 0px;
+    margin-right: 10px; 
+    font-size: 10px;
+  }
+
 
 /* --- Programming Languages --- */
 #programming-languages{

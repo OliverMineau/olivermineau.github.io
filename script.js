@@ -51,7 +51,8 @@ function openApps(btn){
             el.classList.add("shown-app");
         });
         btn.classList.remove("showApp");
-        btn.textContent="See Less"
+        btn.textContent="See Less";
+
     }else{
         shownApps.forEach((el) =>{
             el.classList.remove("shown-app");
@@ -59,6 +60,9 @@ function openApps(btn){
         });
         btn.classList.add("showApp");
         btn.textContent="See More";
+
+        var portfolio = document.getElementById("portfolio-btn");
+        portfolio.scrollIntoView({ behavior: 'smooth', block: 'center'});
     }
 }
 
@@ -72,7 +76,8 @@ function openGames(btn){
             el.classList.add("shown-game");
         });
         btn.classList.remove("showGame");
-        btn.textContent="See Less"
+        btn.textContent="See Less";
+
     }else{
         shownApps.forEach((el) =>{
             el.classList.remove("shown-game");
@@ -80,6 +85,9 @@ function openGames(btn){
         });
         btn.classList.add("showGame");
         btn.textContent="See More";
+
+        var personalProjects = document.getElementById("game-btn");
+        personalProjects.scrollIntoView({ behavior: 'smooth', block: 'center'});
     }
 }
 

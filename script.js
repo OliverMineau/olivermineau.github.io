@@ -61,3 +61,45 @@ function openApps(btn){
         btn.textContent="See More";
     }
 }
+
+function openGames(btn){
+    var hiddenApps = document.querySelectorAll(".hidden-game");
+    var shownApps = document.querySelectorAll(".shown-game");
+
+    if(btn.classList.contains("showGame")){
+        hiddenApps.forEach((el) =>{
+            el.classList.remove("hidden-game");
+            el.classList.add("shown-game");
+        });
+        btn.classList.remove("showGame");
+        btn.textContent="See Less"
+    }else{
+        shownApps.forEach((el) =>{
+            el.classList.remove("shown-game");
+            el.classList.add("hidden-game");
+        });
+        btn.classList.add("showGame");
+        btn.textContent="See More";
+    }
+}
+
+function initSizesUni(){
+    var screenWidth = window.innerWidth;
+    var secondWorkElement = document.querySelectorAll('.work')[2];
+    var secondGameElement = document.querySelectorAll('.game')[2];
+
+    if (screenWidth <= 1000) {
+        secondWorkElement.classList.add('hidden-app');
+        secondGameElement.classList.add('hidden-game');
+    }else{
+        secondWorkElement.classList.remove('hidden-app');
+        secondGameElement.classList.remove('hidden-game');
+    }
+}
+
+window.addEventListener('resize', function() {
+  initSizesUni();
+});
+
+
+initSizesUni();

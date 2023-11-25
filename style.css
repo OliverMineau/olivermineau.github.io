@@ -605,6 +605,13 @@ nav ul li a:hover::after{
     background: #ff004f;
 }
 
+.curvitae{
+    width: 50%;
+    height: 100vh;
+    align-content: center;
+    margin: 0 25% 5% 25%;
+}
+
 /* --- CSS Small Screen --- */
 nav .fa-solid{
     display: none;
